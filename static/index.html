@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Hapi + Socket.io Example</title>
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container" id="app">
+            <h1>{{welcome.message}} (version {{welcome.version}})</h1>
+
+            {{#if connected}}
+                <input type="text" placeholder="text..." value="{{text}}"/>
+                <button on-click="ping">ping</button>
+
+                <ul>
+                    {{#messages}}
+                        <li>{{.}}</li>
+                    {{/if}}
+                </ul>
+            {{/if}}
+        </div>
+
+        <!-- socket.io, etc... -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="http://cdn.ractivejs.org/latest/ractive.js"></script>
+        <script src="https://raw.githubusercontent.com/ractivejs/ractive-transitions-fade/master/ractive-transitions-fade.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
