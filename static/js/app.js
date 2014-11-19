@@ -15,7 +15,7 @@ var SocketIOTest = Ractive.extend({
 })
 
 var app = new SocketIOTest({
-    el: "app",
+    el: "container",
     template: "#app",
     data: {
         welcome: {
