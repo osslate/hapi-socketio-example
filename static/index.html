@@ -4,7 +4,10 @@
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container" id="app">
+        <div id="container" >
+        </div>
+            <script id='app' type='text/ractive'>
+
             <h1>{{welcome.message}} (version {{welcome.version}})</h1>
 
             {{#if connected}}
@@ -17,8 +20,7 @@
                     {{/if}}
                 </ul>
             {{/if}}
-        </div>
-
+      </script>
         <!-- socket.io, etc... -->
         <script src="/socket.io/socket.io.js"></script>
         <script src="http://cdn.ractivejs.org/latest/ractive.js"></script>
